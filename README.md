@@ -1,40 +1,41 @@
 🏋️ Fitness Monolith
 
-A production-ready Fitness Management REST API built using Spring Boot following a monolithic architecture. The application provides secure authentication using JWT, role-based authorization, and RESTful APIs for managing fitness-related data.
+A production-ready Fitness Management REST API built with Spring Boot following a monolithic architecture. The application provides secure authentication using JWT, role-based authorization with Spring Security, and RESTful APIs for managing fitness-related operations.
 
-The project follows clean architecture principles with separate Controller, Service, Repository, DTO, and Security layers to ensure maintainability and scalability.
+Designed with clean architecture principles, the project separates business logic into Controller, Service, Repository, DTO, and Security layers for scalability and maintainability.
 
 🚀 Features
 🔐 JWT Authentication & Authorization
 👥 Role-Based Access Control (Admin/User)
 🛡️ Spring Security Integration
-📦 RESTful API Design
+📦 RESTful API Architecture
 📝 CRUD Operations
 📄 DTO-Based Request & Response Models
 ✅ Bean Validation
 ⚠️ Global Exception Handling
-💾 Database Integration with JPA & Hibernate
+💾 PostgreSQL Database Integration
+🔄 Spring Data JPA & Hibernate
+📚 Swagger/OpenAPI Documentation
 🐳 Docker Support
 🔧 Environment Variable Configuration
 📂 Layered Architecture
-⚡ Maven Build System
 🛠️ Tech Stack
 Backend
-Java 21
+Java 22
 Spring Boot
 Spring Security
-JWT
+JWT (JSON Web Token)
 Spring Data JPA
 Hibernate
 Database
-MySQL
+PostgreSQL (Neon DB Compatible)
+Documentation
+Swagger / OpenAPI
 DevOps
 Docker
-Build Tool
+Tools
 Maven
-API Testing
 Postman
-Version Control
 Git & GitHub
 📂 Project Structure
 src/
@@ -48,59 +49,52 @@ src/
 ├── exception/
 ├── util/
 └── resources/
-⚙️ Getting Started
-Clone the Repository
+⚙️ Installation
+Clone Repository
 git clone https://github.com/Loki-bot1/Fitness-Monolith.git
+
 cd Fitness-Monolith
 Configure Environment Variables
 DB_URL=your_database_url
-DB_USER=your_database_username
-DB_PWD=your_database_password
-JWT_SECRET=your_jwt_secret
-Run the Application
 
-Using Maven:
+DB_USER=your_username
+
+DB_PWD=your_password
+
+JWT_SECRET=your_secret_key
+Run the Project
+
+Using Maven
 
 mvn spring-boot:run
 
-Or with Docker:
+Or using Docker
 
 docker build -t fitness-monolith .
+
 docker run -p 8081:8081 fitness-monolith
+🔐 Authentication
 
-Application URL:
+Authentication is implemented using JWT (JSON Web Token).
 
-http://localhost:8081
-🔐 Security
-
-The application uses Spring Security with JWT authentication.
-
-Features include:
+The application supports:
 
 User Registration
 User Login
 JWT Token Generation
-Protected Endpoints
+Protected APIs
 Role-Based Authorization
 Password Encryption
-📡 API Overview
+📚 API Documentation
 
-Example endpoints:
+Swagger UI
 
-Method	Endpoint	Description
-POST	/auth/register	Register a new user
-POST	/auth/login	Authenticate user
-GET	/users	Get all users
-GET	/users/{id}	Get user by ID
-PUT	/users/{id}	Update user
-DELETE	/users/{id}	Delete user
+http://localhost:8081/swagger-ui.html
 
-Replace these endpoints with the actual ones from your project.
+OpenAPI JSON
 
+http://localhost:8081/v3/api-docs
 🏗️ Architecture
-
-The project follows a layered architecture:
-
 Client
    │
 REST Controller
@@ -109,19 +103,33 @@ Service Layer
    │
 Repository Layer
    │
-Database
-📌 Future Enhancements
-Swagger / OpenAPI Documentation
+PostgreSQL Database
+📌 Highlights
+Production-ready backend architecture
+Secure authentication using JWT
+Clean layered design
+DTO-based API responses
+Global exception handling
+Validation for incoming requests
+Dockerized application
+OpenAPI documentation
+PostgreSQL support
+Environment-based configuration
+🚀 Future Improvements
+Refresh Token Support
+Email Verification
+Password Reset
 Unit & Integration Testing
-CI/CD Pipeline using GitHub Actions
+GitHub Actions CI/CD
 Flyway Database Migration
 Cloud Deployment
-Performance Monitoring
+Workout & Diet Tracking Modules
 👨‍💻 Author
 
 Lokesh Jahure
 
 GitHub: https://github.com/Loki-bot1
-⭐ If you like this project
 
-If you found this project helpful or learned something from it, please consider giving it a ⭐ on GitHub.
+⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub
